@@ -1,0 +1,81 @@
+<!-- This is the HTML 'Home' page. -->
+
+
+
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+{% endblock %}
+
+
+
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Description</h1>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="column">
+        <!-- Website -->
+        <h3>Website</h3>
+        <p>
+            This website allows the user to draw a digit from 0 to 9 included. After submitting its drawing, 
+            the user will receive a prediction of the drawn number.
+        </p>
+    </div>
+    <div class="column">
+        <!-- User Interface -->
+        <h3>User Interface</h3>
+        <p>
+            In the drawing window, the user is asked to draw a digit from 0 to 9. The user can clear the 
+            window or submit the drawing. After a couple of seconds, the prediction model will try to retrieve
+            the number drawn by the user. 
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        <!-- Prediction Model -->
+        <h3>Prediction Model</h3>
+        <p>
+            To make the prediction, we are using a real-time digit classifier: a convolutional
+            neural network (<b>CNN</b>). This deep-learning model is one of the most powerful and accurate network
+            for image recognitions and image classifications.
+        </p>
+    </div>
+    <div class="column">
+        <!-- Performance -->
+        <h3>Performance</h3>
+        <p>
+            The model was trained and evaluated with the famous MNIST dataset: <a href='https://en.wikipedia.org/wiki/MNIST_database'>description here</a><br>
+            The performance of the model on the test set is <b>99.33%</b>.
+        </p>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<!-- Try It Button -->
+<div style="position: relative;">
+    <form action="/DrawingPredictor">
+        <button type="submit" class="btn-draw">   Try it!   </button>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

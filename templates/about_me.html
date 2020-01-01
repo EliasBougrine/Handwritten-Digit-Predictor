@@ -1,0 +1,472 @@
+<!-- This is the HTML 'About me' page. -->
+
+
+
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+{% endblock %}
+
+
+
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Contact Info -->
+<h1>Contact Info</h1>
+<div class="contact">
+    <div class="row">
+        <div class="column-contact">
+            <br>
+            <br>
+            <br>
+            <img src="{{url_for('static', filename='image/photo.png')}}" alt="Elias Bougrine" 
+            width="210" height="210">
+            <br>
+            <br>
+            <i>Elias Bougrine</i>
+        </div>
+        <div class="column-contact">
+            <!-- LinkedIn -->
+            <p>
+                <a href="https://www.linkedin.com/in/elias-bougrine/">
+                    <img src="{{url_for('static', filename='image/linkedin.png')}}" alt="LinkedIn" 
+                    width="42" height="42" align="bottom">
+                </a>   
+                <a href="https://www.linkedin.com/in/elias-bougrine/" style="margin-left: 40px;">
+                    linkedin.com/in/elias-bougrine
+                </a>
+            </p>
+            <!-- Github -->
+            <p>
+                <a href="https://github.com/EliasBougrine">
+                    <img src="{{url_for('static', filename='image/github.png')}}" alt="Github" 
+                    width="42" height="42" align="bottom">
+                </a>   
+                <a href="https://github.com/EliasBougrine" style="margin-left: 40px;">
+                    github.com/EliasBougrine
+                </a>
+            </p>
+            <!-- Email-->
+            <p>
+                <img src="{{url_for('static', filename='image/gmail.png')}}" alt="Gmail" 
+                width="42" height="42" align="bottom">   
+                <i style="margin-left: 40px;">
+                    elias_bougrine@berkeley.edu
+                </i>
+            </p>
+            <!-- Phone Number -->
+            <p>
+                <img src="{{url_for('static', filename='image/phone.png')}}" alt="Phone" 
+                width="42" height="42" align="bottom">   
+                <i style="margin-left: 40px;">
+                    +1 (510) 717-2764
+                </i>
+            </p>
+            <!-- Location -->
+            <p>
+                <img src="{{url_for('static', filename='image/location.jpg')}}" alt="Location" 
+                width="42" height="42" align="bottom">   
+                <i style="margin-left: 40px;">
+                    San Francisco, CA
+                </i>
+            </p>
+        </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Motivation -->
+<h1>Motivation</h1>
+<br>
+<div class="contact">
+    <p>
+        <img src="{{url_for('static', filename='image/opportunities.png')}}" alt="Motivation" 
+        width="550" height="300" style="float: right; margin-left: 30px;">
+        <br>
+        After graduating with a Master of Engineering at the University of California, Berkeley,
+        I started an internship as a <b>Python Developer</b> in San Francisco. This experience has been really 
+        fascinating since it allows me to work on real problems from start to end.
+        <br>
+        <br>
+        Therefore, I <b>developed a website</b> for my company using Python, Java, and HTML to <b>automate
+        a manual process</b> (please refer to the <i>Work Experience</i> section for more details).
+        <br>
+        <br>
+        Since I am <b>truly passionate about Data Science</b>, I wanted to work on a similar project allowing a 
+        person to interact with a prediction model on a user-friendly platform.
+        <br>
+        <br>
+        Moreover, this project helped me to gain more experience in <b>Website Development</b>, as well as
+        more understanding with <b>Tensorflow</b>, the software library needed to implement the convolutional
+        neural network.
+        <br>
+        <br>
+        Finally, I hope that this website will help me to have <b>more visibility in my job searching</b>. 
+        In fact, I am only interning and I am still looking for a full time opportunity in a Data Analytics 
+        team, or as a Python Developer.
+    </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Skills -->
+<h1>Technical Skills</h1>
+<br>
+<div class="contact">
+    <table>
+        <tr>
+            <th style="background-color: #808B96;">Name</th>
+            <th style="background-color: #808B96;">Skills</th>
+        </tr>
+        <tr>
+            <th>Programming Language</th>
+            <th>
+                Python
+                <br>SQL
+                <br>R Programming
+                <br>HTML
+                <br>Java
+                <br>Matlab
+            </th>
+        </tr>
+        <tr>
+            <th>App/Web Development</th>
+            <th>
+                Flask
+                <br>PyQt5
+            </th>
+        </tr>
+        <tr>
+            <th>RESTful Web Services</th>
+            <th>
+                BigQuery
+            </th>
+        </tr>
+        <tr>
+            <th>Code Editor</th>
+            <th>
+                Visual Studio Code
+                <br>Atom
+            </th>
+        </tr>
+        <tr>
+            <th>Web Scraping</th>
+            <th>
+                Beautiful Soup
+                <br>Requests
+                <br>Selenium
+            </th>
+        </tr>
+    </table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Work Experience -->
+<h1>Work Experience</h1>
+<br>
+<!-- ZoomSystems -->
+<div class="contact">
+    <h2><b>Python Developer Intern</b></h2>
+    <h3>ZoomSystems</h3>
+    <h5>
+        10/2019 - Present
+        <span style="float: right;">San Francisco, CA</span>
+    </h5>
+    <br>
+    <p>
+        <img src="{{url_for('static', filename='image/zoom.jpg')}}" alt="ZoomSystems" 
+        width="300" height="200" align="top" style="margin-right: 30px; float: left;">
+        <u> Achievements/Tasks:</u>
+        <br>
+        <br>
+        <li>Worked on a project from start to end and developed a user-friendly website
+            allowing automated invoice checking.</li>
+        <br>
+        <li>Automated a manual task requiring a person to check and compute more than 1500 points
+            from 4 different ressources every month. This manual checking process was requiring a 
+            person to work between five days to 2 weeks a month on it while the code
+            runs in less than 2 minutes.</li>
+        <br>
+        <li>Implemented a final product saving in average more than $45k per month. </li>
+        <br>
+        <li>Used Big Query, Cloud Computing, SQL, Python, HTML, JAVA and web scraping (BeautifulSoup, 
+            requests, selenium).</li>
+        <br>
+        <li>Improved my first verion of the code and reduced the space complexity by 98% compared 
+            to the first implemented version.</li>
+    </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- Google -->
+<div class="contact">
+    <h2><b>Machine Learning Capstone Project, Virtual Reality Patent
+    Analytics for Technology Assessment</b></h2>
+    <h3>Google</h3>
+    <h5>
+        08/2018 - 05/2019
+        <span style="float: right;">Berkeley, CA</span>
+    </h5>
+    <br>
+    <p>
+        <img src="{{url_for('static', filename='image/google.jpg')}}" alt="Google" 
+        width="300" height="200" align="top" style="margin-right: 30px; float: left;">
+        <u> Achievements/Tasks:</u>
+        <br>
+        <br>
+        <li>Part of a team of 8 students selected to work on a project with Google for one year.</li>
+        <br>
+        <li>Created a cutting edge tool for optimizing Google’s Machine Learning patents management 
+            with a 3D environment using Virtual Reality and Natural Language Processing.</li>
+        <br>
+        <li>Responsible for the data cleaning, data processing, clustering, and visualization of the 
+            Google patents and its main competitors (IBM, Sony, and Microsoft).</li>
+        <br>
+        <li>Worked on a dimensionality reduction tool using Principal Components Analysis (PCA).</li>
+        <br>
+        <li>Completed a business analysis of how DeepMind, IBM, Sony, and Microsoft’s Machine Learning 
+            patents fit into Google's patent portfolio.</li>
+    </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- EDM Paris -->
+<div class="contact">
+    <h2><b>Project Manager</b></h2>
+    <h3>EDM Paris</h3>
+    <h5>
+        06/2018 - 08/2018
+        <span style="float: right;">Paris, France</span>
+    </h5>
+    <br>
+    <p>
+        <img src="{{url_for('static', filename='image/edm.png')}}" alt="EDM Paris" 
+        width="300" height="200" align="top" style="margin-right: 30px; float: left;">
+        <br>
+        <br>
+        <u> Achievements/Tasks:</u>
+        <br>
+        <br>
+        <li>Supervised the execution of a 4M€ project. Managed a team of 8 workers.
+            Controlled the deadlines of the project.</li>
+        <br>
+        <li>Reported and presented the progress of the work to a direct supervisor each week.</li>
+        <br>
+        <li>Communicated with the client new goals and objectives.</li>
+    </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Education -->
+<h1>Education</h1>
+<br>
+<!-- Berkeley -->
+<div class="contact">
+    <h2><b>Master of Engineering in Systems Engineering</b></h2>
+    <h3>University of California, Berkeley</h3>
+    <h5>
+        08/2018 - 05/2019
+        <span style="float: right;">GPA: 3.88</span>
+    </h5>
+    <br>
+    <p>
+        <img src="{{url_for('static', filename='image/berkeley.jpg')}}" alt="UC Berkeley" 
+        width="300" height="200" align="top" style="margin-right: 30px; float: left;">
+        After my experience in Hong Kong, I decided to apply to the <i>University of California, Berkeley</i>.
+        The extent of knowledge there is boundless and it could provide any student additional abilities and
+        wisdom.
+        <br>
+        <br>
+        The Master of Engineering at U.C. Berkeley not only provide <b>strong technical skills</b>, but
+        also a <b>complete training in management</b> (entrepreneurship, finance, communication, ...) that 
+        could help anyone to strengthen her/his <b>leadership abilities</b>.
+        <br>
+        <br>
+        During this year, I took advantage of this opportunity and decided to take many extra classes in 
+        different departments to confirm my desire to work as a <b>data scientist</b>, and also strenghten 
+        my technical abilities.
+        <br>
+        <br>
+        Moreover, I also had an interest in <b>finance</b> and <b>entrepreneurship</b>, and therefore took 
+        some classes in these fields. Please see the <i>Interests</i> section for more details.
+        <br>
+        <br>
+        Finally, please click <a href="https://github.com/EliasBougrine">here</a> to be redirected to my 
+        Github and see some of the projects I worked on.
+        <br>
+        <br>
+        <i><u>Main courses:</u></i>
+        <li>Principle and Techniques of Data Science: Data acquisition, cleaning, analysis,
+        visualization, statistical inference, predictive modeling, decision making.</li>
+        <li>Data Mining, optimization, machine learning, reinforcement learning.</li>
+        <li>Mathematical methods and information technologies for problem solving.</li>
+    </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- ESTP -->
+<div class="contact">
+    <h2><b>Master of Science in Civil Engineering</b></h2>
+    <h3>ESTP Paris, France</h3>
+    <h5>
+        09/2016 - 06/2018
+        <span style="float: right;">GPA: 4.00</span>
+    </h5>
+    <br>
+    <p>
+        <img src="{{url_for('static', filename='image/estp.png')}}" alt="ESTP Paris" 
+        width="300" height="200" align="top" style="margin-right: 30px; float: left;">
+        After completing my Bachelor education, I passed a national intensive exam and I joined one of the most
+        competitive Civil Engineering schools in Europe, which is the <i>Ecole Speciale des Travaux 
+        Publics (ESTP)</i>.
+        <br>
+        <br>
+        During this program, I attain the rank of 3<sup>rd</sup> out of 220 students in my class, and I was delivered
+        a <b>scholarship of excellence</b> by the Institution <i>Ambition Travaux Publics</i> based on
+        <b>academic excellence, leadership abilities, and innovative ideas</b>.
+        <br>
+        <br>
+        Furthermore, thanks to my rank, my enthusiasm, and after interviewing, I was <b>selected among 2,000 
+        students</b> by the large corporation <i>Bouygues Construction</i> to visit ongoing civil engineering 
+        projects in Hong Kong using cutting edge technologies. 
+        <br>
+        <br>
+        This incredible experience showed me that innovative technologies not only facilate the task of
+        workers, but also were used on all the projects we visited. All these inventions are based in part
+        on <b>data science</b>, a domain that was interesting me increasingly.
+    </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- Fenelon -->
+<div class="contact">
+    <h2><b>Bachelor of Science in Mathematics</b></h2>
+    <h3>Lycee Fenelon, France</h3>
+    <h5>
+        09/2013 - 06/2016
+        <span style="float: right;">GPA: 3.95</span>
+    </h5>
+    <br>
+    <p>
+        <img src="{{url_for('static', filename='image/fenelon.jpg')}}" alt="Lycee Fenelon" 
+        width="300" height="200" align="top" style="margin-right: 30px; float: left;">
+        <br>
+        After getting my High School's degree with honors and European section in a scientific area of 
+        study, I applied to a "Classe Preparatoire aux Grandes Ecoles", which is the most intensive French
+        program to enter a French engineering school. I joined the <i>Lycee Fenelon</i>, one of the top 
+        ranked establishments in Paris, in a <b>mathematical</b>, phisics, and <b>computer sciences</b> cursus.
+        <br>
+        <br>
+        This specific program gives the student strong fundations in mathematics and engineering sciences, 
+        as well as it develops a <b>methodical and efficient way of thinking</b>.
+        <br>
+        <br>
+        <i><u>Main Courses:</u></i>
+        Advanced Mathematics, <b>Probabilities and Statistics</b>, Computer Science, Physics.
+    </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Leadership, Interests, and Activities -->
+<h1>Leadership, Interests, and Activities</h1>
+<br>
+<div class="contact">
+    <div class="row">
+        <div class="column">
+            <h3>Entrepreneurship</h3>
+            <p>
+                <b>Co-Founder of Fiducio,</b> a financial and technological startup project. Analyzed the 
+                customer and competitor markets, developed the business model, and <b>pitched the results
+                in front of investors</b>.
+            </p>
+        </div>
+        <div class="column">
+            <h3>Fixed income</h3>
+            <p>
+                Built and <b>managed a virtual $100M portfolio with Bloomberg</b>. Invested in US Treasury, US
+                Corporates, and US Mortgage Backed Securities.
+            </p>
+        </div>
+        <div class="column">
+            <h3>High Frequency Trading</h3>
+            <p>
+                Have worked with <b>Reinforcement learning</b> and Python to get the optimal order execution
+                strategy under various price impact models.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

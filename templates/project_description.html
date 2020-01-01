@@ -1,0 +1,297 @@
+<!-- This is the HTML 'Project Description' page. -->
+
+
+
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+{% endblock %}
+
+
+
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Data Science Problem -->
+<h1>Data Science Problem</h1>
+<br>
+<br>
+<br>
+<div class="project-descr">
+    <!-- Introduction -->
+    <h2>Introduction</h2>
+    <br>
+    <!-- Data -->
+    <h4>Data</h4>
+    <p>
+        <img src="{{url_for('static', filename='image/mnist.png')}}" alt="MNIST Dataset" 
+        width="300" height="300" style="margin-left: 30px; float: right;">
+        In this project, we will be using the <a href="https://en.wikipedia.org/wiki/MNIST_database">
+        MNIST dataset</a> , which is a set of 70,000 small images of 
+        digits handwritten by high school students and employees of the US Census Bureau. Each image is 
+        labeled with the digit it represents. This set has been studied so much that it is often called 
+        the “Hello World” of Machine Learning: whenever people come up with a new classification algorithm, 
+        they are curious to see how it will perform on MNIST. Whenever someone learns Machine Learning, 
+        sooner or later they tackle MNIST.
+        <br>
+        <br>
+        There are 70,000 images, and each image has 784 features. This is because each image is 28 × 28 pixels, 
+        and each feature simply represents one pixel’s intensity, from 0 (white) to 255 (black).
+    </p>
+    <!-- Project -->
+    <h4>Project</h4>
+    <p>
+        We have to explore the data and tackle the problem using machine learning.
+        We will build a model that can predict the number represented by an image.
+    </p>
+    <!-- Method -->
+    <h4>Method</h4>
+    <p>
+        We first import the data and sample a training and test sets. We are getting insights of the data 
+        and training our model with the training dataset, and only evaluating the final performance of the 
+        model with the test dataset (to avoid data snooping).
+
+    </p>
+    <br>
+    <!-- Data Science Prediction Models -->
+    <h2>Data Science Prediction Models</h2>
+    <br>
+    <img src="{{url_for('static', filename='image/PCA.png')}}" alt="PCA" 
+        width="500" height="400" style="margin-right: 30px; float: left;">
+    <!-- Primary Approach -->
+    <h4>Primary Approach</h4>
+    <p>
+        My first intuition was to treat the problem with the common Data Science prediction models
+        (Random Forest, SVM, Gradient Boosting...).
+        <br>
+        Therefore, I followed the different steps (Exploratory Data Analysis, Data Cleaning,
+        Feature Engineering, Model Fitting) needed to properly work on an end-to-end Data Science project.
+        <br>
+        <br>
+        Luckily, the MNIST dataset is very famous and I didn't need to spend a lot of time on the 
+        exploratory analysis, nor on the data cleaning.
+    </p>
+    <!-- Dimensionnality Reduction -->
+    <h4>Dimensionnality Reduction</h4>
+    <p>
+        Reducing dimensionnality does lose some information, so even though it will speed up training,
+        it may also make our system perform slightly worse.
+        <br>
+        <br>
+        In our case, however, we can see that selecting 160 features will preserve more than 95% of the
+        variance (and therefore of the information). Thus, the new dimensionality of the training data may
+        filter out some noise and unnecessary details, and thus result in higher performance.
+    </p>
+    <!-- Feature Scaling -->
+    <h4>Feature Scaling</h4>
+    <p>
+        The last step before fitting the models was to scale the features: machine learning algorithms
+        don't perform well when the inputs with numerical attributes have highly different scales.
+    </p>
+    <!-- Prediction Models -->
+    <h4>Prediction Models</h4>
+    <p>
+        I used many different models and evaluated their performance with the F1 score. You can see the 
+        results in the table below.
+        <br>
+        <br>
+        <u>Note</u>: I also implemented a Hard Voting Classifier using Stochastic Gradient Descent,
+        Gradient Boosting, and Support Vector Machine models.
+    </p>
+    <br>
+    <br>
+    <!-- Table -->
+    <table style="width: 50%;" align="center">
+        <tr>
+            <th style="background-color: #808B96;"><u>Model</u></th>
+            <th style="background-color: #808B96;"><u>F1 Score</u></th>
+        </tr>
+        <tr>
+            <th>Support Vector Machine (SVM)</th>
+            <th>97.02 %</th>
+        </tr>
+        <tr>
+            <th>Hard Voting Classifier</th>
+            <th>94.80 %</th>
+        </tr>
+        <tr>
+            <th>Gradient Boosting</th>
+            <th>91.91 %</th>
+        </tr>
+        <tr>
+            <th>Stochastic Gradient Descent</th>
+            <th>90.03 %</th>
+        </tr>
+        <tr>
+            <th>K Neighbors Classifier</th>
+            <th>88.56 %</th>
+        </tr>
+        <tr>
+            <th>Random Forest Classifier</th>
+            <th>87.16 %</th>
+        </tr>
+        <tr>
+            <th>Bagging Classifier</th>
+            <th>74.45 %</th>
+        </tr>
+        <tr>
+            <th>Adaboost Classifier</th>
+            <th>68.91 %</th>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <!-- Neural Network -->
+    <h2>Neural Network</h2>
+    <br>
+    <img src="{{url_for('static', filename='image/cnn.png')}}" alt="CNN" 
+        width="800" height="400" style="margin-left: 30px; float: right;">
+    <!-- Idea -->
+    <h4>Idea</h4>
+    <p>
+        Even with the high performance of the Support Vector Machine model, I believed I could further
+        improve accuracy using a Deep Learning model: a Convolutional Neural Network (CNN).
+        <br>
+        <br>
+        This neural network is greatly performant for image recognition.
+    </p>
+    <br>
+    <!-- New Input -->
+    <h4>New Input</h4>
+    <p>
+        One of the first step was to add new inputs within the training dataset. As a matter of fact, 
+        I wanted to make sure that the model will recognize the drawings of the user. Therefore, I added
+        150 drawings (after transforming them) in the training dataset. After comparing the accuracy with
+        and without these new inputs, I concluded that the performance of the model is slightly better
+        with them.
+    </p>
+    <br>
+    <!-- Building the CNN -->
+    <h4>Building the CNN</h4>
+    <p>
+        To build the network, I normalized the inputs, reshaped the images, built, compiled and
+        fit a network with 10 epochs.
+        <br>
+        I obtained the following accuracy on the test set:
+        <br> 
+        <br>
+        <br>
+        <!-- Table -->
+        <table style="width: 50%;" align="center">
+            <tr>
+                <th style="background-color: #808B96;"><u>Model</u></th>
+                <th style="background-color: #808B96;"><u>Accuracy</u></th>
+            </tr>
+            <tr>
+                <th>Convolutional Neural Network</th>
+                <th>99.33 %</th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <!-- Results -->
+        <h4>Results</h4>
+        <p>
+            As you can see, the CNN model has the highest accuracy. This is the one chosen for this
+            website.
+            <br>
+            <br>
+            One of the beauty of the Tensorflow library is also that you can save your model and call
+            it with the Keras library. Therefore, I am loading the model to make a new prediction 
+            everytime the user is testing a drawing.
+        </p>
+    </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Web Development -->
+<h1>Web Development</h1>
+<br>
+<br>
+<br>
+<div class="project-descr">
+    <!-- Website -->
+    <h2>Website</h2>
+    <br>
+    <!-- Framework -->
+    <h4>Framework</h4>
+    <p>
+        There are many different available frameworks for Web Development in Python. I am familiar with 
+        Flask and decided to use this one. 
+        <br>
+        I really enjoyed working on this project. As a matter of fact, this website is only the second one
+        I developped. Therefore, I feel I strenghtened my skills in HTML and JavaScript!
+    </p>
+    <br>
+    <!-- Canvas -->
+    <h4>Canvas</h4>
+    <p>
+        In order to ask the user to input a digit, a canvas window was implemented to allow the 
+        user to draw. Being quite new to canvas, it turned out to be a bit challenging. As a matter of
+        fact, positioning the window and getting the coordinates of the mouse according to the position of the
+        canvas can be more complicated than I first thought.
+    </p>
+    <br>
+    <br>
+    <!-- Processing the Image -->
+    <h2>Processing the Image</h2>
+    <br>
+    <img src="{{url_for('static', filename='image/example.png')}}" alt="Example" 
+        width="400" height="400" style="margin-left: 30px; float: right;">
+    <p>
+        When a user hits the <i>Predict it!</i> button, the image is saved locally. It will then
+        be deleted after that the CNN predicts the drawing.
+        <br>
+        <br>
+        After that step, the image needs to be transformed. As a matter of fact, the neural network was
+        trained with images of 28px x 28px. Since the canvas dimension is bigger than that, we need to
+        first center and then resize the drawing of the user while maintening a proportionnal ratio.
+        To do so, we are calling the <i>transform_image</i> class.
+        <br>
+        <br>
+        One of my main concern was that the drawing of the user, after being transformed, will be too 
+        different than the MNIST training images. It would make the performance of the CNN decrease.
+        A possible solution to that would be to acquire the drawings of the users and to re-train the neural
+        network after a prediction. Over the time, this would constitute a new training set. By this mean, 
+        the accuracy of the model would be again more than 99 %.
+        However, I didnt implement this solution. Instead, I spent a lot of time on the acquisition, 
+        centering, and transformation of the image.
+    </p>
+    <br>
+    <br>
+    <!-- Prediction -->
+    <h2>Prediction</h2>
+    <br>
+    <p>
+        The final step is to load the CNN model using to the Keras library.
+        The model will predict the input of the user in a couple of seconds. The result is then displayed
+        on the same webpage.
+    </p>
+</div>
+<br>
+<br>
+<br>
+{% endblock %}

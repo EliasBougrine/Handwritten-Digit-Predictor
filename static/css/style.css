@@ -1,0 +1,161 @@
+/* This file defines the different styles of the HTML page */
+
+
+
+body {
+    font-family: sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    position: relative;
+}
+
+
+.column h3 {
+    text-align: center;
+    position: relative;
+    text-decoration: underline;
+}
+
+
+.column p {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+
+.column-contact {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.btn-draw{
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+}
+
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+.column {
+    flex: 40%;
+    padding: 10px;
+}
+
+
+.row {
+    display: flex;
+}
+
+
+.project-descr {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: justify;
+    position: relative;
+}
+
+
+.contact {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: justify;
+    position: relative;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+}
+  
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+.btn-try-again {
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+}
+
+
+.btn-clear {
+    position: absolute;
+    left: 50%;
+    margin-left: -210px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+}
+
+
+.btn-predict {
+    position: absolute;
+    right: 50%;
+    margin-right: -210px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+}
+
+
+.can {
+    border: 2px solid;
+}
